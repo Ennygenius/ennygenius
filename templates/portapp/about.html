@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <title>About Page</title>
+</head>
+
+<body>
+
+
+    <div class="mynav">
+        <nav class="navbar fixed-top navbar-expand-lg bg-light">
+            <div class="container ">
+                <a class="navbar-brand" href="home.html">Enny<span>genius</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navber">
+                        <img src="{% static 'myapp/closed.png' %}" alt="">
+                      </div>
+                    
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolios</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <!-- main pic -->
+       {% if messages%}
+            {% for message in messages %}
+            <div class="alert alert = {{message.tags}}">{{message}}</div>
+             {% endfor %}
+      {% endif %}
+
+    <div class="cont">
+        <div class="container">
+            <h1>I build value by design.</h1>
+
+            <p>I’m Inu Enike, but you can just call me Ennykhe.<br> Originally hailing from the Nigeria 🇬🇧 for the last decade or so I’ve been honing my skills in design,<br>
+                <br> production and management roles building products for the web, mobile, games and, more recently, VR & AR.<br>
+                <br>I’ve worked with small, agile teams on skunkworks projects and larger development teams with product lifecycles spanning multiple years.<br><br> I strive to create elegant solutions that surprise and delight users, while keeping complex
+                technical dependencies in mind for implementation, scalability and developer sanity.<br><br> I also occasionally give talks on design and product development. Have an interesting project? <a href="contact.html">Let's talk > .</a>
+            </p>
+
+            <h1>past work</h1>
+            <div class="all" style="display: flex;">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/iiioo.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">ke up the bulk of the card's content.</p>
+                        <a href="portfolio.html" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'myapp/iiio.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">ke up the bulk of the card's content.</p>
+                        <a href="portfolio.html" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'myapp/ipho.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">ke up the bulk of the card's content.</p>
+                        <a href="portfolio.html" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </div>
+
+    <!-- <div class="card">
+        <img class="card-img-top" src="" alt="card">
+        <div class="card-body">
+            <h5 class="card-title">
+                card title
+            </h5>
+            <p class="card-text">quicky</p>
+            <a href="#" class="btn btn-primary"> Go</a>
+
+        </div> -->
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>
